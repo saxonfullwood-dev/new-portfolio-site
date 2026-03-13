@@ -76,7 +76,7 @@ const APPS = [
                 id: 'revit-stadium',
                 name: 'Stadium Project',
                 image: '/Revit/Stadium 1 (1).png',
-                desc: 'A personal stadium project modeled in Revit and rendered using Cinema 4D to explore large-scale BIM coordination and atmospheric visualization.',
+                desc: 'A personal stadium project modelled in Revit and rendered using Cinema 4D to explore large-scale BIM coordination and atmospheric visualisation.',
                 gallery: [
                     '/Revit/Stadium 1 (1).png',
                     '/Revit/Stadium 1 (2).png',
