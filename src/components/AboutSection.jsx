@@ -106,7 +106,6 @@ const AboutSection = () => {
                         <div>
                             <div style={{ fontWeight: 700 }}>University of Gloucestershire</div>
                             <div style={{ fontSize: '0.9rem', opacity: 0.7 }}>BA (Hons) Architecture</div>
-                            <div style={{ fontSize: '0.8rem', opacity: 0.5 }}>First-Class Honours Representative</div>
                         </div>
                     </div>
                 </Card>
