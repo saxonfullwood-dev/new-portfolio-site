@@ -126,8 +126,9 @@ const ContactSection = () => {
                     </div>
 
                     <motion.a
-                        href="/CV/SAXON FULLWOOD CV.pdf"
-                        download="SAXON FULLWOOD CV.pdf"
+                        href="https://drive.google.com/file/d/1aangv4IgETx2MlRNQhr-bpiKkpoEncd-/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         whileHover={{ scale: 1.05, backgroundColor: 'white', color: 'black' }}
                         whileTap={{ scale: 0.95 }}
                         style={{
