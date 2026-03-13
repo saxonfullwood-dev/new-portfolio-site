@@ -1,0 +1,468 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: flex-start;
+  min-width: 320px;
+  min-height: 100vh;
+  transition: background-color 0.5s ease;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* --- Responsive Styles --- */
+
+/* Navbar */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 4rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-user {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+  }
+
+  .navbar-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+
+  .navbar-user {
+    display: none;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100%;
+  padding: 0 5%;
+  position: relative;
+}
+
+.hero-left-content {
+  flex: 0 0 35%;
+  padding-right: 2rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60%;
+}
+
+.hero-carousel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -2px;
+}
+
+
+@media (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    padding-top: 8rem;
+    /* Space for navbar */
+    padding-bottom: 2rem;
+    align-items: flex-start;
+  }
+
+  .hero-left-content {
+    width: 100%;
+    flex: none;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    height: auto;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  /* Mobile Carousel Fix */
+  .hero-carousel {
+    width: 100%;
+    flex: none;
+    height: auto;
+    min-height: 400px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-left: 1rem;
+    /* Padding for scroll start */
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    display: flex;
+    /* Ensure flex layout */
+  }
+
+  /* Force items to be blocks in scroll container */
+  .hero-carousel>div {
+    min-width: 85vw !important;
+    /* Force wide cards */
+    height: 60vh !important;
+    /* Taller on mobile */
+    width: 85vw !important;
+    border-radius: 20px !important;
+    /* Less aggressive radius */
+    scroll-snap-align: center;
+    margin-right: 1rem;
+    opacity: 1 !important;
+    /* Force visible */
+    filter: none !important;
+    /* Remove grayscale */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .carousel-arrow {
+    display: flex !important;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.25);
+    scale: 1.1;
+  }
+
+  .carousel-arrow.left {
+    left: 10px;
+  }
+
+  .carousel-arrow.right {
+    right: 10px;
+  }
+}
+
+.carousel-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+
+.carousel-arrow {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+/* About Section Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(200px, auto);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on tablet */
+  }
+
+  .col-span-8,
+  .col-span-4 {
+    grid-column: span 2 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    min-height: auto !important;
+  }
+
+  .about-hero-text-big {
+    font-size: 15vw !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin-bottom: -2rem;
+  }
+}
+
+/* Contact Section */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 4rem;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .contact-heading {
+    font-size: 4rem !important;
+  }
+}
+
+/* Desktop Section Responsive */
+.desktop-container {
+  width: min(80vw, 1200px);
+  aspect-ratio: 16/9;
+  height: auto;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  background-color: #0f172a;
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+}
+
+.desktop-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-content: flex-start;
+}
+
+.desktop-windows-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  #desktop-section {
+    padding: 2rem 1rem !important;
+  }
+
+  .desktop-container {
+    width: 100%;
+    aspect-ratio: 9/16;
+    /* Portrait on mobile! */
+    height: 80vh;
+    /* Fixed height */
+  }
+
+  /* Hide taskbar on mobile or simplify */
+  /* Actually, let's keep it but make it scrollable if too many apps */
+
+  .desktop-content {
+    padding: 1rem;
+    flex-direction: row;
+    /* Grid like on mobile */
+    align-content: flex-start;
+  }
+
+  .desktop-clock {
+    display: none !important;
+  }
+}
+
+/* --- Project Pages Responsiveness --- */
+
+.project-page {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1024px) {
+  .project-content {
+    padding-top: 6rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .project-header {
+    grid-template-columns: 1fr !important;
+    padding: 0 1.5rem 4rem !important;
+    gap: 3rem !important;
+    min-height: auto !important;
+  }
+
+  header.project-header > div:last-child {
+    height: auto !important;
+    min-height: auto !important;
+    order: -1; /* Image on top for mobile */
+  }
+
+  header.project-header > div:last-child img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .project-section {
+    grid-template-columns: 1fr !important;
+    padding: 2rem 1.5rem 4rem !important;
+    gap: 2rem !important;
+  }
+
+  .project-section > div {
+    height: auto !important;
+    min-height: 300px;
+  }
+
+  /* Fix for inner grids in sections (like in VisualProcess) */
+  .project-section .inner-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  @media (max-width: 640px) {
+    .project-section .inner-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .project-gallery {
+    columns: 1 !important;
+    padding: 0 1.5rem 2rem !important;
+  }
+
+  /* Typography tweaks */
+  .project-header h1 {
+    font-size: 3.5rem !important;
+    line-height: 1 !important;
+  }
+
+  .project-section h2 {
+    font-size: 2.2rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .project-header p {
+    font-size: 1.2rem !important;
+  }
+}
