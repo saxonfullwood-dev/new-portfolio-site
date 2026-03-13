@@ -125,7 +125,9 @@ const ContactSection = () => {
                         </motion.a>
                     </div>
 
-                    <motion.button
+                    <motion.a
+                        href="/CV/SAXON FULLWOOD CV.pdf"
+                        download="SAXON FULLWOOD CV.pdf"
                         whileHover={{ scale: 1.05, backgroundColor: 'white', color: 'black' }}
                         whileTap={{ scale: 0.95 }}
                         style={{
@@ -141,12 +143,14 @@ const ContactSection = () => {
                             display: 'flex',
                             alignItems: 'center',
                             gap: '0.8rem',
-                            fontFamily: "'Outfit', sans-serif"
+                            fontFamily: "'Outfit', sans-serif",
+                            textDecoration: 'none',
+                            width: 'fit-content'
                         }}
                     >
                         <FileText size={20} />
                         Download CV
-                    </motion.button>
+                    </motion.a>
 
                 </motion.div>
             </div>
