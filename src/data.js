@@ -13,8 +13,8 @@ export const items = [
       { text: "DOWNLOAD PDF", href: "https://drive.google.com/file/d/1HJ9giSMZi5Tti3qw5ZravPCa4X8dwPez/view?usp=sharing" },
     ],
     image: "/elev front expanded.png",
-    color: "#0f766e", // Teal 700 - likely matching a day shot or water? Or maybe #0e7490 (Cyan)
-    theme: "teal"
+    color: "#1c1917", // Elegant deep warm stone/gray for a premium architectural feel
+    theme: "dark"
   },
   {
     id: 2,
