@@ -2,21 +2,19 @@
 export const items = [
   {
     id: 1,
-    title: "SOUND PAVILION",
-    subtitle: "Cymatics, shadow, and tuned rain shelters",
+    title: "HOTEL DESIGN",
+    subtitle: "PUBLISHED 2026 - Ongoing",
     description: "",
-    date: "PUBLISHED NOV 06, 2020", // Kept just in case, but using specific metadata now
-    cardSubtitle: "Cymatics, shadow, and tuned rain shelters",
-    // New metadata fields
-    university: "UNIVERSITY OF GLOUCESTERSHIRE — 1st Year",
-    year: "2023",
+    cardSubtitle: "Split-level planning + custom bay design",
+    university: "UNIVERSITY OF GLOUCESTERSHIRE — 3rd Year",
+    year: "2026 - Ongoing",
     links: [
-      { text: "VIEW FULL PROJECT", href: "/sound-pavilion" },
-      { text: "DOWNLOAD PDF", href: "https://drive.google.com/file/d/1UQDSVnONt_MZ3C4Z5RUTDLpbkqFYo1Uj/view?usp=sharing" },
+      { text: "VIEW FULL PROJECT", href: "/hotel-design" },
+      { text: "DOWNLOAD PDF", href: "https://drive.google.com/file/d/1HJ9giSMZi5Tti3qw5ZravPCa4X8dwPez/view?usp=sharing" },
     ],
-    image: "/Sound pavilion Front.jpeg", // Direct path from public
-    color: "#0f172a", // Dark Blue to match
-    theme: "blue"
+    image: "/elev front expanded.png",
+    color: "#0f766e", // Teal 700 - likely matching a day shot or water? Or maybe #0e7490 (Cyan)
+    theme: "teal"
   },
   {
     id: 2,
@@ -36,19 +34,21 @@ export const items = [
   },
   {
     id: 3,
-    title: "HOTEL DESIGN",
-    subtitle: "PUBLISHED 2026 - Ongoing",
+    title: "SOUND PAVILION",
+    subtitle: "Cymatics, shadow, and tuned rain shelters",
     description: "",
-    cardSubtitle: "Split-level planning + custom bay design",
-    university: "UNIVERSITY OF GLOUCESTERSHIRE — 3rd Year",
-    year: "2026 - Ongoing",
+    date: "PUBLISHED NOV 06, 2020", // Kept just in case, but using specific metadata now
+    cardSubtitle: "Cymatics, shadow, and tuned rain shelters",
+    // New metadata fields
+    university: "UNIVERSITY OF GLOUCESTERSHIRE — 1st Year",
+    year: "2023",
     links: [
-      { text: "VIEW FULL PROJECT", href: "/hotel-design" },
-      { text: "DOWNLOAD PDF", href: "https://drive.google.com/file/d/1HJ9giSMZi5Tti3qw5ZravPCa4X8dwPez/view?usp=sharing" },
+      { text: "VIEW FULL PROJECT", href: "/sound-pavilion" },
+      { text: "DOWNLOAD PDF", href: "https://drive.google.com/file/d/1UQDSVnONt_MZ3C4Z5RUTDLpbkqFYo1Uj/view?usp=sharing" },
     ],
-    image: "/elev front expanded.png",
-    color: "#0f766e", // Teal 700 - likely matching a day shot or water? Or maybe #0e7490 (Cyan)
-    theme: "teal"
+    image: "/Sound pavilion Front.jpeg", // Direct path from public
+    color: "#0f172a", // Dark Blue to match
+    theme: "blue"
   },
   {
     id: 4,
