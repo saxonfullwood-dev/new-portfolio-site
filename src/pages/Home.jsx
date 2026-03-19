@@ -141,8 +141,8 @@ function Home() {
                                         width: isActive ? 500 : 80, // Expanded width vs Shrink width
                                         height: isActive ? 600 : 400,
                                         borderRadius: isActive ? 40 : 100,
-                                        opacity: isActive ? 1 : 0.4,
-                                        filter: isActive ? 'brightness(1)' : 'brightness(0.5) grayscale(0.5)'
+                                        opacity: isActive ? 1 : 0.7,
+                                        filter: isActive ? 'brightness(1)' : 'brightness(0.7) grayscale(0.3)'
                                     }}
                                     transition={{
                                         type: "spring",
